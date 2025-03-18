@@ -1,0 +1,91 @@
+/* Frutiger CSS */
+/* Custom fonts */
+@font-face {
+    font-family: frutiger;
+    src: url(fonts/Frutiger.woff);
+}
+
+@font-face {
+    font-family: frutiger-bold;
+    src: url(fonts/Frutiger_bold.woff);
+}
+
+/* Variables */
+:root {
+    /* Colors */
+    --fa_blue: rgba(0,50,219,0.75);
+    --fa_azure: rgba(6, 137, 228, 0.75);
+    --fa_cerulean: rgba(56, 168, 255, 0.75);
+    --fa_green: rgba(113, 171, 35, 0.75);
+    --fa_yellow: rgba(251, 185, 5, 0.75);
+    --fa_red: rgba(213, 94, 14, 0.75); 
+
+    /* Dimensions */
+    --page_stretch: 80vw;
+    --content_height: 150vh;
+
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: frutiger;
+}
+
+body {
+    background: url(../files/img/bg.png) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Boxes */
+.box {
+    border-radius: 2vh;
+
+    background: linear-gradient(to bottom right,var(--fa_blue), var(--fa_azure), var(--fa_cerulean));
+    backdrop-filter: blur(3px);
+
+    box-shadow:
+        0 5px 1px var(--fa_cerulean), /*Bottom ridge*/
+        0 0 20px -1px whitesmoke;
+}
+
+div.box {
+    padding: 1vw;
+}
+
+/* Navigation bar */
+nav#top_nav {
+    z-index: 5;
+    display: flex;
+    position: sticky;
+    top: 1vh;
+    margin: auto;
+    margin-top: 1vh;
+    width: var(--page_stretch);
+    height: 8vh;
+}
+
+/* Page content */
+.page_content {
+    position: relative;
+    margin: auto;
+    margin-top: 3vh;
+    width: var(--page_stretch);
+    height: 80vh;
+    /* border: white solid; */
+}
+
+#left_index {
+    position: absolute;
+    width: 18vw;
+    height: var(--content_height);
+}
+
+#content {
+    position: relative;
+    left: 20vw;
+    width: 60vw;
+    height: var(--content_height);
+}
